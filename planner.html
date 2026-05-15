@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+    <link rel="icon" type="image/x-icon" href="media/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="css/plannerstyles.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="planner.html">STUDY PLANNER</a>
+            <a href="resource.html">RESOURCE LIBRARY</a>
+        </nav>
+
+        <main>
+            <h1>Study Planner</h1>
+            <p><em>Create a personalized study plan based on your 
+            subject, difficulty level, and available materials.</em></p>
+
+            <img id="flowchart-image" src="media/images/flowchart.png">
+
+            <section id="planner-form">
+                <h2>Plan Your Study Session</h2>
+                
+                <form id="study-form">
+                    <p>
+                        <label for="subject-name">What subject are you studying?</label>
+                        <input type="text" id="subject-name" name="subject" 
+                        placeholder="e.g., Biology, Calculus, History" required>
+                    </p>
+                    <p><strong>What materials do you have available?</strong></p>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="material-textbook" name="materials" value="textbook">
+                        <label for="material-textbook">Textbook</label>
+                        
+                        <input type="checkbox" id="material-flashcards" name="materials" value="flashcards">
+                        <label for="material-flashcards">Flashcards</label>
+                        
+                        <input type="checkbox" id="material-quiz" name="materials" value="quiz">
+                        <label for="material-quiz">Practice Quiz</label>
+                        
+                        <input type="checkbox" id="material-notes" name="materials" value="notes">
+                        <label for="material-notes">Class Notes</label>
+                    </div>
+
+                    <p><strong>How difficult is this subject for you?</strong></p>
+                    <div class="radio-group">
+                        <input type="radio" id="difficulty-easy" name="difficulty" value="Easy" checked>
+                        <label for="difficulty-easy">Easy</label>
+                        
+                        <input type="radio" id="difficulty-medium" name="difficulty" value="Medium">
+                        <label for="difficulty-medium">Medium</label>
+                        
+                        <input type="radio" id="difficulty-hard" name="difficulty" value="Hard">
+                        <label for="difficulty-hard">Hard</label>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" id="reset-button" onclick="resetForm()">Reset Form</button>
+                        <button type="button" id="submit-button" 
+                        onclick="generateStudyPlan()">Generate Study Plan</button>
+                    </div>
+                </form>
+                <p>
+                    <span id="help-icon" onmouseover="showTooltip()" onmouseout="hideTooltip()">?</span>
+                    <span id="tooltip-message">Fill in your subject, select materials and difficulty,
+                    then click "Generate Study Plan" for personalized advice.</span>
+                </p>
+            </section>
+
+            <section id="study-plan-display">
+                <h2>Your Personalized Study Plan</h2>
+                <article id="plan-output">
+                    Your study plan will appear here after you click "Generate Study Plan"
+                </article>
+            </section>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
