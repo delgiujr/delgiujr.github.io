@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="icon" type="image/x-icon" href="media/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="planner.html">STUDY PLANNER</a>
+            <a href="resource.html">RESOURCE LIBRARY</a>
+        </nav>
+
+        <div class="content">
+            <h1>Study Resource Hub</h1>
+
+            <img src="media/images/jclibrary.jpg"
+            class="hero-image">
+
+            <!--JavaScript Interactive Feature-->
+            <h2>Resource of the Day</h2>
+            <div class="resource-card">
+                <p>Click the button below to discover a randomly selected study resource.</p>
+                <div id="resource-display">
+                    Click the button to see a resource!
+                </div>
+                <button class="btn-primary" onclick="displayResourceOfDay()">Surprise Me!</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
