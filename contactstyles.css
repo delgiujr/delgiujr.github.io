@@ -1,0 +1,103 @@
+:root {
+    --primary: #1E3A5F;
+    --secondary: #4A7B9D;
+    --background: #151516;
+    --accent: #5A9E6E;
+    --text: #f0e3e3;
+    --border: #D1D9E6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.main {
+    margin: 0 auto;
+    background-color: var(--secondary);
+    border-radius: 12px;
+    text-align: center;
+}
+
+nav {
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+#contact-table-wrapper {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+#contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-size: 1rem;
+}
+
+#contact-table thead tr {
+    background-color: var(--primary);
+}
+
+#contact-table th {
+    color: var(--white);
+    font-weight: bold;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+#contact-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+}
+
+#contact-table tbody tr:hover {
+    background-color: #e8f0fe;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#contact-table tbody tr:nth-child(even) {
+    background-color: var(--background);
+}
+
+#contact-table tbody tr:nth-child(odd) {
+    background-color: var(--white);
+}
+
+#contact-table td:first-child {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+#contact-table td:last-child {
+    color: var(--accent);
+}
